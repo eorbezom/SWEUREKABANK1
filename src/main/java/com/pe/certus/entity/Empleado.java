@@ -1,3 +1,4 @@
+
 package com.pe.certus.entity;
 
 import jakarta.persistence.Column;
