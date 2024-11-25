@@ -62,9 +62,14 @@ public class ClienteController {
 		return"views/cliente/edit";
 	}
 	
-	
-	public String eliminar() {
-		return"";
+	@GetMapping("views/cliente/delete/{id}")
+	public String eliminar(@PathVariable Long id) {
+		Cliente cliente = clienteService.getIdCliente(id);
+		
+		log.info("Objeto Eliminado: {}", cliente );
+		clienteService.eliminarCliente(id);
+
+		return"redirect:/views/cliente";
 	}
 
 }

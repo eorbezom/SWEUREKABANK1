@@ -54,7 +54,7 @@ public class ClienteServiceImpl implements ClienteService{
 	@Override
 	public void eliminarCliente(Long id) {// PARA ELIMINAR CON SU ID
 		
-		clienteRepository.deleteById(id);;
+		clienteRepository.deleteById(id);
 		
 		
 	}
