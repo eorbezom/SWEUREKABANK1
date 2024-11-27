@@ -8,7 +8,8 @@
 </head>
 <body>
 	<header th:replace="home::header"></header>
-	<!-- Formulario centrado -->
+	
+	<div class="container d-flex justify-content-center align-items-center">
 	<div class="form-container">
 		<h1 class="text-center">Crear Cliente</h1>
 		<form th:action="@{/views/cliente/save}" method="post">
@@ -40,12 +41,8 @@
 		</form>
 	</div>
 	
-	<footer th:fragment="footer"
-		class="bg-dark text-center text-white mt-auto py-3">
-		<div class="container">© 2024 Eurekabank. Todos los derechos
-			reservados.</div>
-	</footer>
-	
+	</div>
+	<footer th:replace="home::footer"></footer>
 	<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 	<script type="text/javascript" th:src="@{/js/jquery-3.1.1.min.js}"></script>
 	<script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
